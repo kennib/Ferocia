@@ -34,7 +34,7 @@ def term_deposit_interest_form():
             form.term.data,
             form.schedule.data,
         )
-        print(final_balance)
+
         return render_template('form.html',
             form=form,
             final_balance=f'${final_balance:,}',
