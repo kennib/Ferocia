@@ -13,11 +13,11 @@ def term_deposit_interest(deposit_amount : Dollars,
     """
     >>> term_deposit_interest(10000, 1.10, 3, "at maturity")
     10330
-    >>> term_deposit_interest(10354, 1.10, 3, "monthly")
+    >>> term_deposit_interest(10000, 1.10, 3, "monthly")
     10335
-    >>> term_deposit_interest(10354, 1.10, 3, "quarterly")
+    >>> term_deposit_interest(10000, 1.10, 3, "quarterly")
     10335
-    >>> term_deposit_interest(10354, 1.10, 3, "annually")
+    >>> term_deposit_interest(10000, 1.10, 3, "annually")
     10334
     """
 
