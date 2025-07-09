@@ -1,0 +1,35 @@
+<h1>Term Deposit Calculator</h1>
+<form method="POST">
+  <p>
+    <label for="deposit">Deposit</label>
+    <input name="deposit" type="currency" value="10000" />
+  </p>
+
+  <p>
+    <label for="interest">Interest Rate</label>
+    <input
+      name="interest"
+      type="number"
+      value="1.10"
+      min="0"
+      max="5"
+      step="0.1"
+    />%
+  </p>
+
+  <p>
+    <label for="term">Term (years)</label>
+    <input name="term" type="number" value="3" min="1" max="5" step="1" />
+  </p>
+
+  <p>
+    <input type="submit" value="calculate" />
+  </p>
+
+  {% if final_balance %}
+  <p>
+    <label for="final_balance">Final Balance</label>
+    <output name="final_balance">{{ final_balance }}</output>
+  </p>
+  {% endif %}
+</form>
