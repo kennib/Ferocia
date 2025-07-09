@@ -25,14 +25,14 @@ def term_deposit_interest(deposit_amount : Dollars,
 
     match payment_schedule:
         case "monthly":
-            return
+            return round(deposit_amount * (1 + yearly_interest_rate/4)**(investment_term*4))
         case "quarterly":
-            return
+            return round(deposit_amount * (1 + yearly_interest_rate/4)**(investment_term*4))
         case "annually":
-            return
+            return round(deposit_amount * (1 + yearly_interest_rate)**investment_term)
         case "at maturity":
-            return int(deposit_amount * (1 + yearly_interest_rate*investment_term))
+            return round(deposit_amount * (1 + yearly_interest_rate*investment_term))
 
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
+    doctest.testmod(verbose=True)
