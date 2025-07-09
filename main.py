@@ -15,9 +15,18 @@ def term_deposit_interest_form():
             int(request.form['term']),
             "at maturity",
         )
-        return render_template('form.html', final_balance=f'${final_balance:,.2f}')
+        return render_template('form.html',
+            deposit=int(request.form['deposit']),
+            interest=float(request.form['interest']),
+            term=int(request.form['term']),
+            final_balance=f'${final_balance:,.2f}',
+        )
     else:
-        return render_template('form.html')
+        return render_template('form.html',
+            deposit="10000",
+            interest="1.10",
+            term="3",
+        )
 
 
 if __name__ == "__main__":
