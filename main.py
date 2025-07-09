@@ -41,7 +41,6 @@ def term_deposit_interest_form():
         )
     
     if form.errors:
-        print(form.errors)
         for field, errors in form.errors.items():
             for error in errors:
                 flash(f"Error in {field}: {error}")
