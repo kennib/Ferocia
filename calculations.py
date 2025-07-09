@@ -20,6 +20,14 @@ def term_deposit_interest(deposit_amount : Dollars,
     10335
     >>> term_deposit_interest(10000, 1.10, 3, "annually")
     10334
+    >>> term_deposit_interest(920000, 1.20, 5, "at maturity")
+    975200
+    >>> term_deposit_interest(920000, 1.20, 5, "monthly")
+    976860
+    >>> term_deposit_interest(920000, 1.20, 5, "quarterly")
+    976802
+    >>> term_deposit_interest(920000, 1.20, 5, "annually")
+    976541
     """
 
     yearly_interest_rate = yearly_interest_percent / 100
