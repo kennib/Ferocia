@@ -1,6 +1,6 @@
 {
   "name": "Devcontainer",
-  "image": "mcr.microsoft.com/devcontainers/python:3.8-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10-bullseye",
   "customizations": {
     "vscode": {
       "extensions": ["ms-python.python"]
