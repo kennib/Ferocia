@@ -2,7 +2,8 @@ from typing import TypeAlias, Literal
 
 Dollars : TypeAlias = int
 Years : TypeAlias = int
-InterestPaymentSchedule : TypeAlias = Literal["monthly", "quarterly", "annually", "at maturity"]
+VALID_PAYMENT_SCHEDULES = ["monthly", "quarterly", "annually", "at maturity"]
+InterestPaymentSchedule : TypeAlias = Literal[tuple(VALID_PAYMENT_SCHEDULES)]
 
 def term_deposit_interest(deposit_amount : Dollars,
              yearly_interest_percent : float,
