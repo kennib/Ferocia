@@ -1,9 +1,9 @@
 # Ferocia term deposit calculator
 
 ## Cloud dev environment
-You can go to the online dev environment at [codesandbox.io](https://codesandbox.io/p/github/kennib/Ferocia)
+You can go to the online dev environment at [codesandbox.io](https://codesandbox.io/p/github/kennib/Ferocia/public)
 
-And then open [main.py](main?file=%2Fmain.py) or [calculations.py](main?file=%2Fcalculations.py)
+And then open [main.py](https://codesandbox.io/p/github/kennib/Ferocia/public?file=%2Fmain.py) or [calculations.py](https://codesandbox.io/p/github/kennib/Ferocia/public?file=%2Fcalculations.py)
 
 ## Setup and run locally
 
