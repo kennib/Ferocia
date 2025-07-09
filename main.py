@@ -12,9 +12,17 @@ app.config["SECRET_KEY"] = "Use a ENV Variable in production"
 app.config["WTF_CSRF_ENABLED"] = False
 
 class TermDepositCalculatorForm(FlaskForm):
-    deposit = IntegerField('Deposit', default=10000, validators=[DataRequired(), NumberRange(min=0)])
-    interest = DecimalField('Interest Rate', default=1.1, places=2, validators=[DataRequired(), NumberRange(min=0, max=10)])
-    term = IntegerField('Term', default=3, validators=[DataRequired(), NumberRange(min=1, max=10)])
+    deposit = IntegerField('Deposit',
+        default=10000,
+        validators=[DataRequired(), NumberRange(min=0)],
+        render_kw={'step': 100})
+    interest = DecimalField('Interest Rate',
+        default=1.1, places=2,
+        validators=[DataRequired(), NumberRange(min=0, max=10)],
+        render_kw={'step': 0.1})
+    term = IntegerField('Term',
+        default=3,
+        validators=[DataRequired(), NumberRange(min=1, max=10)])
     schedule = RadioField('Payment Schedule', default="at maturity",
         choices=[
             (schedule, schedule.capitalize())
