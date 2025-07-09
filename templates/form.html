@@ -30,6 +30,18 @@
   </p>
 
   <p>
+    <label for="schedule">Payment Schedule</label>
+    {% for schedule_type in ["monthly", "quarterly", "annually", "at maturity"]
+    %}
+    <label>
+      <input name="schedule" type="radio" value="{{ schedule_type }}"
+             {% if schedule == schedule_type %}checked{% endif %} />
+      {{ schedule_type |capitalize }}
+    </label>
+    {% endfor %}
+  </p>
+
+  <p>
     <input type="submit" value="calculate" />
   </p>
 
