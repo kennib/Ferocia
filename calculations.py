@@ -34,7 +34,7 @@ def term_deposit_interest(deposit_amount : Dollars,
 
     match payment_schedule:
         case "monthly":
-            return round(deposit_amount * (1 + yearly_interest_rate/4)**(investment_term*4))
+            return round(deposit_amount * (1 + yearly_interest_rate/12)**(investment_term*12))
         case "quarterly":
             return round(deposit_amount * (1 + yearly_interest_rate/4)**(investment_term*4))
         case "annually":
